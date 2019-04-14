@@ -12,7 +12,7 @@ Please check the example in the test directory, the network structure as below f
 
 #### Find out the path between two nodes.
 ```
-cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-dependencies.jar --task path -g A,C
+cat test.network.txt | java -jar NetworkShortestPath-1.0.jar --task path -g A,C
 #output
 A       B       1
 B       C       5
@@ -24,7 +24,7 @@ Given two groups of genes, topGenes(T) and KnownGenes(K), the average shortest p
 ```
 # known.g.txt = {A,D}
 # top.g.txt   = {C,E}
-cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-dependencies.jar -k known.g.txt -i top.g.txt
+cat test.network.txt | java -jar NetworkShortestPath-1.0.jar -k known.g.txt -i top.g.txt
 # output:
 4
 ```
@@ -32,7 +32,7 @@ cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-depe
 #### Bootstrapping the average shortest path between two groups of genes.
 Fixed the KnownGenes, and random pick ```-r``` number of genes from the gene pool(excluding genes from KnownGenes) to forming the topGenes(T), and calculate the average shortest path between them as previous section. Repeat this process ```-b``` times. This is very useful to generate the null distribution for statistical testing. Optional: use ```-n``` to check which specific genes were choosen each time.
 ```
-cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-dependencies.jar -k known.g.txt -r 2 -b 2
+cat test.network.txt | java -jar NetworkShortestPath-1.0.jar -k known.g.txt -r 2 -b 2
 # output, this output is random as random picking genes.
 3.5
 4
