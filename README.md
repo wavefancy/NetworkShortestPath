@@ -8,7 +8,7 @@ Given a weighted undirected network, as example above, this software can help:
 
 
 Please check the example in the test directory, the network structure as below figure:
-<img src="NetworkShortestPath/NetworkShortestPath/test/example.png" width="60%" style="padding-left:200px;">
+<img src="./NetworkShortestPath/test/example.png" width="40%" style="padding-left:200px;">
 
 ### Find out the path between two nodes.
 ```
@@ -39,3 +39,10 @@ cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-depe
 ```
 
 
+#### Tested environment
+java version 1.8, should work with version >= 1.8
+
+#### Credit
+The shortest path searching algorithm was by the (Dijkstra's algorithm)[https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm], taking the java implementation from (Princeton University)[https://algs4.cs.princeton.edu/44sp/DijkstraUndirectedSP.java.html]. If you use this program please cite:
+1. Our paper
+2. Sedgewick, R, Wayne, K: Algorithms, Addison-Wesley 2011.
