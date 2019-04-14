@@ -30,13 +30,20 @@ cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-depe
 ```
 
 #### Bootstrapping the average shortest path between two groups of genes.
-Fixed the KnownGenes, and random pick ```-r``` number of genes from the gene pool(excluding genes from KnownGenes) to forming the topGenes(T), and calculate the average shortest path between them as previous section. Repeat this process ```-b``` times. This is very useful to generate the null distribution for statistical testing. 
+Fixed the KnownGenes, and random pick ```-r``` number of genes from the gene pool(excluding genes from KnownGenes) to forming the topGenes(T), and calculate the average shortest path between them as previous section. Repeat this process ```-b``` times. This is very useful to generate the null distribution for statistical testing. Optional: use ```-n``` to check which specific genes were choosen each time.
 ```
 cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-dependencies.jar -k known.g.txt -r 2 -b 2
 # output, this output is random as random picking genes.
 3.5
 4
 ```
+
+#### Help and other options
+```-h``` : output the help message
+
+```--omatchmin```: output the minimal value of each gene in topGenes(```T```) to genes in KnownGenes(```K```).
+
+```--penalty```  : set the ```penalty``` value if there's no connection between a gene from topGenes(```T```) to a gene from KnownGenes(```K```), default 1000.
 
 
 #### Tested environment
