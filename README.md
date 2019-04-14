@@ -10,7 +10,7 @@ Given a weighted undirected network, as example above, this software can help:
 Please check the example in the test directory, the network structure as below figure:
 <img src="./NetworkShortestPath/test/example.png" width="40%" style="padding-left:200px;">
 
-#### Find out the path between two nodes.
+#### Find out the shortest path between two nodes.
 ```
 cat test.network.txt | java -jar NetworkShortestPath-1.0.jar --task path -g A,C
 #output
