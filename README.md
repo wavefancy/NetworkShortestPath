@@ -2,12 +2,14 @@
 Find the shortest path between two nodes or between two group of nodes on a pre-defined network.
 
 Given a weighted undirected network, as example above, this software can help:
-- Find out the path between 2 nodes.
+- Find out the shortest path between 2 nodes.
 - Calculate the average shortest path between two groups of genes.
 - Bootstrapping the average shortest path between two groups of genes to form null distribution.
 
 
-Please check the example in the test directory:
+Please check the example in the test directory, the network structure as below figure:
+<img src="NetworkShortestPath/NetworkShortestPath/test/example.png" width="60%" style="padding-left:200px;">
+
 ### Find out the path between two nodes.
 ```
 cat test.network.txt | java -jar ../target/NetworkShortestPath-1.0-jar-with-dependencies.jar --task path -g A,C
